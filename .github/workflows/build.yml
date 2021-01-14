@@ -77,12 +77,12 @@ jobs:
 
       - name: Setup app advanced
         run: |
-          echo YII_ENV=test >> .env
-          echo DATABASE_DSN=mysql:host=localhost;dbname=yii2advanced_test >> .env
-          echo DATABASE_USERNAME=root >> .env
-          echo DATABASE_PASSWORD=root >> .env
-          echo BACKEND_COOKIE_VALIDATION_KEY=testkey >> .env
-          echo FRONTEND_COOKIE_VALIDATION_KEY=testkey >> .env
+          echo "YII_ENV=test" >> $GITHUB_ENV
+          echo "DATABASE_DSN=mysql:host=localhost;dbname=yii2advanced_test" >> $GITHUB_ENV
+          echo "DATABASE_USERNAME=root" >> $GITHUB_ENV
+          echo "DATABASE_PASSWORD=root" >> $GITHUB_ENV
+          echo "BACKEND_COOKIE_VALIDATION_KEY=testkey" >> $GITHUB_ENV
+          echo "FRONTEND_COOKIE_VALIDATION_KEY=testkey" >> $GITHUB_ENV
 
       - name: Dump configuration
         run: php yii config-dump
