@@ -78,7 +78,7 @@ jobs:
             php${{ matrix.php }}-composer-${{ matrix.dependencies }}-
 
       - name: Copy configuration
-        run: php -r "file_exists('.env') || copy('.env.ci', '.env');
+        run: php -r "file_exists('.env') || copy('.env.ci', '.env')";
 
       -name: Init Database
         run: mysql -uroot -h127.0.0.1 -proot -e 'CREATE DATABASE IF NOT EXISTS yii2advanced_test;'
