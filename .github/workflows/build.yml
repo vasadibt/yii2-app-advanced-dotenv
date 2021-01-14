@@ -66,12 +66,6 @@ jobs:
           ini-values: date.timezone='UTC'
           coverage: pcov
 
-      - name: Verify MySQL connection
-        run: |
-          mysql --version
-          sudo apt-get install -y mysql-client
-          mysql --host 127.0.0.1 --port 3306 -uroot -proot -e "SHOW DATABASES;"
-
       - name: Determine composer cache directory on Linux
         if: matrix.os == 'ubuntu-latest'
         run: echo "COMPOSER_CACHE_DIR=$(composer config cache-dir)" >> $GITHUB_ENV
