@@ -21,9 +21,6 @@ Documentation is at [docs/guide/README.md](docs/guide/README.md).
 [![Total Downloads](https://img.shields.io/packagist/dt/vasadibt/yii2-app-advanced-dotenv.svg)](https://packagist.org/packages/vasadibt/yii2-app-advanced-dotenv)
 [![build](https://github.com/vasadibt/yii2-app-advanced-dotenv/workflows/build/badge.svg)](https://github.com/vasadibt/yii2-app-advanced-dotenv/actions?query=workflow%3Abuild)
 
-
-
-
 DIRECTORY STRUCTURE
 -------------------
 
