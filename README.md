@@ -17,9 +17,12 @@ deploying the application in different environments.
 
 Documentation is at [docs/guide/README.md](docs/guide/README.md).
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii2-app-advanced.svg)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app-advanced.svg)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![build](https://github.com/yiisoft/yii2-app-advanced/workflows/build/badge.svg)](https://github.com/yiisoft/yii2-app-advanced/actions?query=workflow%3Abuild)
+[![Latest Stable Version](https://img.shields.io/packagist/v/vasadibt/yii2-app-advanced-dotenv.svg)](https://packagist.org/packages/vasadibt/yii2-app-advanced-dotenv)
+[![Total Downloads](https://img.shields.io/packagist/dt/vasadibt/yii2-app-advanced-dotenv.svg)](https://packagist.org/packages/vasadibt/yii2-app-advanced-dotenv)
+[![build](https://github.com/vasadibt/yii2-app-advanced-dotenv/workflows/build/badge.svg)](https://github.com/vasadibt/yii2-app-advanced-dotenv/actions?query=workflow%3Abuild)
+
+
+
 
 DIRECTORY STRUCTURE
 -------------------
