@@ -28,3 +28,6 @@ phpunit.phar
 
 # vagrant runtime
 /.vagrant
+
+# Env configuration file
+/.env
