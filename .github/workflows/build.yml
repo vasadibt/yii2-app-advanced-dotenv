@@ -68,10 +68,10 @@ jobs:
           coverage: pcov
 
       - name: Verify MySQL connection
-          run: |
-            mysql --version
-            sudo apt-get install -y mysql-client
-            mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports['3306'] }} -uuser -psecret -e "SHOW DATABASES;"
+        run: |
+          mysql --version
+          sudo apt-get install -y mysql-client
+          mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports['3306'] }} -uuser -psecret -e "SHOW DATABASES;"
 
       - name: Determine composer cache directory on Linux
         if: matrix.os == 'ubuntu-latest'
