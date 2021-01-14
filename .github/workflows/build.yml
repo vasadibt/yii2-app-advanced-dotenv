@@ -79,12 +79,11 @@ jobs:
 
       - name: Setup app advanced
         run: |
-          sed -i "s/YII_ENV=dev/YII_ENV=test/" .env
-          sed -i "s/DATABASE_DSN=mysql:host=localhost;dbname=yii2advanced/DATABASE_DSN=mysql:host=localhost;dbname=yii2advanced_test/" .env
-          sed -i "s/DATABASE_DSN=mysql:host=localhost;dbname=yii2advanced/DATABASE_DSN=mysql:host=localhost;dbname=yii2advanced_test/" .env
-          sed -i "s/DATABASE_PASSWORD=/DATABASE_PASSWORD=root" .env
-          sed -i "s/BACKEND_COOKIE_VALIDATION_KEY=/BACKEND_COOKIE_VALIDATION_KEY=testkey/" frontend/config/main.php
-          sed -i "s/FRONTEND_COOKIE_VALIDATION_KEY=/FRONTEND_COOKIE_VALIDATION_KEY=testkey/" backend/config/main.php
+          echo YII_ENV=test >> .env
+          echo DATABASE_DSN=mysql:host=localhost;dbname=yii2advanced_test >> .env
+          echo DATABASE_USERNAME=root >> .env
+          echo DATABASE_PASSWORD=root >> .env
+          echo FRONTEND_COOKIE_VALIDATION_KEY=testkey >> .env
 
       - name: Apply migration
         run: php yii migrate --interactive=0
