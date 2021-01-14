@@ -18,10 +18,8 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-
         php:
           - "7.4"
-
         mysql:
           - "5.7"
 
@@ -83,7 +81,11 @@ jobs:
           echo DATABASE_DSN=mysql:host=localhost;dbname=yii2advanced_test >> .env
           echo DATABASE_USERNAME=root >> .env
           echo DATABASE_PASSWORD=root >> .env
+          echo BACKEND_COOKIE_VALIDATION_KEY=testkey >> .env
           echo FRONTEND_COOKIE_VALIDATION_KEY=testkey >> .env
+
+      - name: Dump configuration
+        run: php yii config-dump
 
       - name: Apply migration
         run: php yii migrate --interactive=0
