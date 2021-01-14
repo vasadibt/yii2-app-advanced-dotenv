@@ -1,11 +1,6 @@
 on:
   - pull_request
   - push
-#  push:
-#    branches:
-#      - master
-#      - features/*
-
 
 name: build
 
@@ -32,8 +27,6 @@ jobs:
       mysql:
         image: mysql:${{ matrix.mysql }}
         env:
-          MYSQL_USER: user
-          MYSQL_PASSWORD: secret
           MYSQL_ROOT_PASSWORD: root
         ports:
           - 3306:3306
@@ -75,8 +68,7 @@ jobs:
         with:
           path: ${{ env.COMPOSER_CACHE_DIR }}
           key: php${{ matrix.php }}-composer-${{ matrix.dependencies }}-${{ hashFiles('**/composer.json') }}
-          restore-keys: |
-            php${{ matrix.php }}-composer-${{ matrix.dependencies }}-
+          restore-keys: php${{ matrix.php }}-composer-${{ matrix.dependencies }}-
 
       - name: Copy configuration
         run: php -r "file_exists('.env') || copy('.env.ci', '.env');"
